@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A4E8F'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='700' font-size='28' fill='white'>e</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Einstein @ Silicon Valley 2026 — Programa Executivo de Imersão</title>
+<meta name="description" content="Imersão executiva de 3 dias em Saúde, AI & Inovação no Vale do Silício, desenhada para lideranças do Hospital Albert Einstein.">
+<link rel="canonical" href="https://einstein.enhub.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://einstein.enhub.com.br/">
+<meta property="og:title" content="Einstein @ Silicon Valley 2026">
+<meta property="og:description" content="Imersão executiva de 3 dias em Saúde, AI & Inovação no Vale do Silício — Stanford, healthtechs e biotechs. Um programa Enhub.">
+<meta property="og:image" content="https://einstein.enhub.com.br/img/stanford.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg:#FAFAF8;
+  --bg-card:#F1F0EC;
+  --bg-dark:#081C30;
+  --text:#0C0C1C;
+  --text-sec:#6B6B6B;
+  --text-muted:#9B9890;
+  --accent:#0A4E8F;
+  --accent-mid:#1565AE;
+  --accent-light:#5EA3DC;
+  --border:#E5E2DC;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-body:'DM Sans',-apple-system,sans-serif;
+  --font-mono:'DM Mono','SF Mono',monospace;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --container:1140px;
+  --gutter:clamp(1.25rem,4vw,3rem);
+}
+
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+::selection{background:var(--accent-mid);color:#fff}
+
+.container{max-width:var(--container);margin:0 auto;padding:0 var(--gutter)}
+section{padding:clamp(4rem,7vw,7rem) 0}
+
+/* Kicker */
+.kicker{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
+.kicker::before{content:'';width:20px;height:1px;background:var(--accent)}
+
+h2{font-family:var(--font-display);font-size:clamp(2.5rem,4.6vw,3.8rem);font-weight:600;line-height:1.15;letter-spacing:-.01em;margin-bottom:1rem}
+h2 em{font-style:italic;font-weight:400;color:var(--accent)}
+.lead{font-size:16px;font-weight:300;color:var(--text-sec);line-height:1.7;max-width:560px}
+
+/* Scroll reveal */
+.sr{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.sr.v{opacity:1;transform:none}
+.sr-d1{transition-delay:.1s}.sr-d2{transition-delay:.2s}
+
+/* ═══════════════════════════════════════
+   HEADER
+   ═══════════════════════════════════════ */
+.header{position:fixed;top:0;left:0;right:0;z-index:100;height:116px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--gutter);transition:background .3s,border-color .3s,box-shadow .3s;border-bottom:1px solid transparent}
+.header.scrolled{background:rgba(250,250,248,.92);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom-color:var(--border);box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.header__logo img{height:68px;width:auto;filter:brightness(0) invert(1);transition:filter .3s}
+.header.scrolled .header__logo img{filter:none}
+.header__right{display:flex;align-items:center;gap:clamp(1.4rem,3vw,2.8rem)}
+.header__enhub{height:88px;width:auto;filter:invert(1);opacity:.85;transition:filter .3s,opacity .3s}
+.header.scrolled .header__enhub{filter:none;opacity:1}
+.header__nav{display:flex;align-items:center;gap:clamp(1.2rem,2.5vw,2.4rem)}
+.header__link{font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7);padding:6px 0;border-bottom:1px solid transparent;transition:color .3s,border-color .3s}
+.header__link:hover{color:#fff;border-bottom-color:var(--accent-light)}
+.header.scrolled .header__link{color:var(--text-sec)}
+.header.scrolled .header__link:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* ═══════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════ */
+.hero{position:relative;width:100%;height:100vh;height:100dvh;min-height:600px;overflow:hidden}
+.hero__img{position:absolute;inset:0}
+.hero__img img{width:100%;height:100%;object-fit:cover;object-position:center 45%;filter:brightness(.52) saturate(.85) contrast(1.08);animation:heroZoom 9s var(--ease) forwards}
+@keyframes heroZoom{from{transform:scale(1.06)}to{transform:scale(1)}}
+.hero__overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(4,12,22,.5) 0%,rgba(4,12,22,.12) 38%,rgba(4,12,22,.3) 60%,rgba(4,12,22,.78) 100%)}
+
+.hero__tag{position:absolute;top:138px;left:50%;transform:translateX(-50%);z-index:3;font-family:var(--font-mono);font-size:17px;font-weight:500;letter-spacing:.48em;text-transform:uppercase;color:rgba(255,255,255,.78);white-space:nowrap}
+
+.hero__content{position:absolute;bottom:clamp(3rem,6vw,5rem);left:var(--gutter);right:var(--gutter);z-index:2;max-width:780px}
+.hero__kicker{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-light);margin-bottom:1.4rem}
+.hero__kicker::before{content:'';width:20px;height:1px;background:var(--accent-light)}
+.hero__headline{font-family:var(--font-display);font-size:clamp(2.6rem,5.5vw,4.4rem);font-weight:500;line-height:1.12;color:#fff;letter-spacing:-.01em;margin-bottom:1.4rem}
+.hero__headline em{font-style:italic;font-weight:400;color:var(--accent-light)}
+.hero__sub{font-size:16px;font-weight:300;color:rgba(255,255,255,.78);line-height:1.7;max-width:560px;margin-bottom:1.6rem}
+.hero__meta{font-family:var(--font-mono);font-size:11px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.hero__meta b{color:rgba(255,255,255,.9);font-weight:500}
+
+.hero__scroll{position:absolute;right:var(--gutter);bottom:clamp(3rem,6vw,5rem);z-index:3;display:flex;flex-direction:column;align-items:center;gap:.8rem;color:rgba(255,255,255,.55)}
+.hero__scroll-label{font-family:var(--font-mono);font-size:9px;font-weight:400;letter-spacing:.3em;text-transform:uppercase;writing-mode:vertical-rl}
+.hero__scroll-line{width:1px;height:48px;background:rgba(255,255,255,.25);position:relative;overflow:hidden}
+.hero__scroll-line::after{content:'';position:absolute;left:0;top:-50%;width:100%;height:50%;background:#fff;animation:scrollLine 2.2s var(--ease) infinite}
+@keyframes scrollLine{to{top:110%}}
+@media(max-width:767px){.hero__scroll{display:none}}
+
+/* ═══════════════════════════════════════
+   POR QUE AGORA
+   ═══════════════════════════════════════ */
+.why__inner{display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media(min-width:768px){.why__inner{grid-template-columns:1.1fr 1fr;gap:clamp(3rem,6vw,6rem);align-items:center}}
+.why__text p{font-size:16px;font-weight:300;color:var(--text-sec);line-height:1.75;margin-bottom:1.2rem;max-width:480px}
+.why__text p strong{font-weight:500;color:var(--text)}
+.why__quote{font-family:var(--font-display);font-size:clamp(1.5rem,2.6vw,1.9rem);font-weight:400;font-style:italic;color:var(--text);line-height:1.55;border-left:2px solid var(--accent);padding-left:1.8rem}
+
+/* ═══════════════════════════════════════
+   DIAS
+   ═══════════════════════════════════════ */
+.days{background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.days__intro{text-align:center;max-width:640px;margin:0 auto clamp(3rem,5vw,4.5rem)}
+.days__intro .kicker{justify-content:center}
+.days__intro .lead{margin:0 auto}
+
+.day{background:var(--bg);border:1px solid var(--border);border-radius:3px;margin-bottom:1.6rem;overflow:hidden}
+.day__head{padding:2rem clamp(1.4rem,3.5vw,2.8rem) 1.8rem;border-bottom:1px solid var(--border)}
+.day__num{font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem;display:inline-flex;align-items:center;gap:.6rem}
+.day__num::before{content:'';width:20px;height:1px;background:var(--accent)}
+.day__head h3{font-family:var(--font-display);font-size:clamp(2rem,3.4vw,2.6rem);font-weight:600;line-height:1.15;letter-spacing:-.01em}
+.day__theme{font-size:14.5px;font-weight:300;color:var(--text-sec);margin-top:.4rem;max-width:640px}
+.day__body{padding:1.4rem clamp(1.4rem,3.5vw,2.8rem) 2rem}
+.timeline{list-style:none}
+.timeline li{display:grid;grid-template-columns:118px 1fr;gap:1.6rem;padding:.85rem 0;border-bottom:1px solid var(--border)}
+.timeline li:last-child{border-bottom:none}
+.timeline .time{font-family:var(--font-mono);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--accent);padding-top:3px;white-space:nowrap}
+.timeline .what b{font-weight:500;font-size:15.5px;color:var(--text);display:block}
+.timeline .what span{font-size:14px;font-weight:300;color:var(--text-sec)}
+.timeline li.hl .what b{color:var(--accent)}
+
+/* ═══════════════════════════════════════
+   EMPRESAS
+   ═══════════════════════════════════════ */
+.companies__intro{max-width:640px;margin-bottom:clamp(2.5rem,4vw,3.5rem)}
+.company-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.company{border:1px solid var(--border);border-radius:3px;padding:1.6rem 1.4rem;background:var(--bg);transition:border-color .3s,transform .3s var(--ease)}
+.company:hover{border-color:var(--accent);transform:translateY(-3px)}
+.company__logo{height:34px;width:auto;max-width:130px;object-fit:contain;object-position:left center;margin-bottom:1rem;border-radius:4px}
+.company__name{font-family:var(--font-display);font-size:1.3rem;font-weight:600;color:var(--text);margin-bottom:.35rem;line-height:1.2}
+.company__desc{font-size:13px;font-weight:300;color:var(--text-sec);line-height:1.55}
+.companies__note{margin-top:1.8rem;font-size:13.5px;font-weight:300;font-style:italic;color:var(--text-muted)}
+
+.stanford{margin-top:clamp(2.5rem,4vw,3.5rem);background:var(--bg-dark);border-radius:3px;padding:clamp(2.2rem,4.5vw,3.5rem);display:grid;grid-template-columns:1fr;gap:2rem;color:#fff}
+@media(min-width:768px){.stanford{grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}}
+.stanford h3{font-family:var(--font-display);font-size:clamp(1.9rem,3.2vw,2.4rem);font-weight:500;margin-bottom:.8rem}
+.stanford h3 em{font-style:italic;font-weight:400;color:var(--accent-light)}
+.stanford p{font-size:15px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.7}
+.stanford ul{list-style:none}
+.stanford li{padding:.8rem 0 .8rem 1.8rem;position:relative;font-size:14.5px;font-weight:300;color:rgba(255,255,255,.85);border-bottom:1px solid rgba(255,255,255,.12)}
+.stanford li:last-child{border-bottom:none}
+.stanford li::before{content:'';position:absolute;left:0;top:1.45rem;width:14px;height:1px;background:var(--accent-light)}
+
+/* ═══════════════════════════════════════
+   INCLUSO
+   ═══════════════════════════════════════ */
+.included{background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.included__cols{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:clamp(2rem,3.5vw,3rem)}
+@media(min-width:768px){.included__cols{grid-template-columns:1.4fr 1fr}}
+.inc{background:var(--bg);border:1px solid var(--border);border-radius:3px;padding:clamp(1.8rem,3.5vw,2.8rem)}
+.inc h3{font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;margin-bottom:1.4rem}
+.inc.yes h3{color:var(--accent)}
+.inc.no h3{color:var(--text-muted)}
+.inc ul{list-style:none}
+.inc li{padding:.75rem 0 .75rem 1.9rem;position:relative;font-size:14.5px;font-weight:300;color:var(--text-sec);border-bottom:1px solid var(--border);line-height:1.55}
+.inc li:last-child{border-bottom:none}
+.inc li b{font-weight:500;color:var(--text)}
+.inc.yes li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:500}
+.inc.no li::before{content:'';position:absolute;left:0;top:1.35rem;width:12px;height:1px;background:var(--text-muted)}
+
+/* ═══════════════════════════════════════
+   INVESTIMENTO
+   ═══════════════════════════════════════ */
+.invest__box{text-align:center;margin-top:1.2rem;border:1px solid var(--border);border-radius:3px;padding:clamp(2.4rem,4.5vw,3.2rem) clamp(1.5rem,4vw,3.5rem);background:var(--bg)}
+.invest__label{font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem}
+.invest__value{font-family:var(--font-display);font-size:clamp(3.4rem,7vw,5rem);font-weight:500;color:var(--text);line-height:1;letter-spacing:-.01em}
+.invest__value sup{font-family:var(--font-mono);font-size:.26em;font-weight:400;letter-spacing:.1em;color:var(--accent);vertical-align:2.2em}
+
+/* ═══════════════════════════════════════
+   ENHUB
+   ═══════════════════════════════════════ */
+.enhub{background:var(--bg-dark);color:#fff;padding:0;overflow:hidden}
+.enhub__inner{display:grid;grid-template-columns:1fr}
+@media(min-width:880px){.enhub__inner{grid-template-columns:1fr 1fr;min-height:540px}}
+.enhub__text{padding:clamp(3.5rem,6vw,6rem) var(--gutter);display:flex;flex-direction:column;justify-content:center}
+@media(min-width:880px){.enhub__text{padding-left:max(var(--gutter),calc((100vw - var(--container))/2))}}
+.enhub__text .kicker{color:var(--accent-light);font-size:13px;letter-spacing:.22em}
+.enhub__text .kicker::before{background:var(--accent-light);width:28px}
+.enhub__text h2{color:#fff;margin-bottom:1.2rem}
+.enhub__text h2 .brand{font-weight:700;color:#fff;letter-spacing:-.02em}
+.enhub__text h2 em{color:var(--accent-light)}
+.enhub__text p{font-size:15.5px;font-weight:300;color:rgba(255,255,255,.7);line-height:1.75;max-width:460px;margin-bottom:2rem}
+.enhub__clients{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem}
+.enhub__client{font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.25);padding:9px 18px;border-radius:2px;transition:border-color .3s,color .3s,background .3s}
+a.enhub__client:hover{border-color:var(--accent-light);color:#fff;background:rgba(94,163,220,.12)}
+.enhub__clients-more{font-family:var(--font-body);font-size:13px;font-weight:300;font-style:italic;color:rgba(255,255,255,.5);margin-left:.4rem}
+.enhub__photo{position:relative;min-height:320px}
+.enhub__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9) brightness(.92)}
+.enhub__photo::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--bg-dark) 0%,transparent 22%)}
+@media(max-width:879px){.enhub__photo::after{background:linear-gradient(180deg,var(--bg-dark) 0%,transparent 25%)}}
+.enhub__caption{position:absolute;bottom:1.2rem;right:1.4rem;z-index:2;font-family:var(--font-mono);font-size:9px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75);background:rgba(8,28,48,.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);padding:6px 12px;border-radius:2px}
+
+/* ═══════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════ */
+.footer{border-top:1px solid var(--border);padding:1.2rem 0 1.6rem}
+.footer__inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer__left{display:flex;align-items:center;gap:1.2rem}
+.footer__logo img{height:86px;width:auto}
+.footer__contact{font-size:14px;font-weight:300;color:var(--text-sec)}
+.footer__contact b{font-weight:500;color:var(--text);display:block}
+.footer__contact a{color:var(--accent)}
+.footer__copy{font-family:var(--font-mono);font-size:9px;color:var(--text-muted);letter-spacing:.06em}
+
+/* ═══════════════════════════════════════
+   RESPONSIVO
+   ═══════════════════════════════════════ */
+@media(max-width:767px){
+  .company-grid{grid-template-columns:1fr 1fr}
+  .hero__tag{display:none}
+  .header__nav{display:none}
+  .header__logo img{height:54px}
+  .header__enhub{height:64px}
+}
+@media(max-width:480px){
+  .company-grid{grid-template-columns:1fr}
+  .timeline li{grid-template-columns:1fr;gap:.15rem}
+}
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <a class="header__logo" href="#"><img src="img/einstein-logo.svg" alt="Hospital Israelita Albert Einstein"></a>
+  <div class="header__right">
+    <nav class="header__nav">
+      <a class="header__link" href="#programa">Programa</a>
+      <a class="header__link" href="#empresas">Empresas</a>
+      <a class="header__link" href="#investimento">Investimento</a>
+    </nav>
+    <img class="header__enhub" src="img/logo.png" alt="Enhub Executive">
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero__img"><img src="img/stanford.jpg" alt="Memorial Church vista dos arcos do Main Quad, Stanford University"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__tag">Silicon Valley</div>
+  <div class="hero__content">
+    <div class="hero__kicker">Programa Executivo de Imersão</div>
+    <h1 class="hero__headline">Onde a medicina encontra o <em>futuro da inteligência artificial</em></h1>
+    <p class="hero__sub">Uma imersão executiva de 3 dias no coração do Vale do Silício, desenhada exclusivamente para lideranças do Hospital Israelita Albert Einstein.</p>
+    <div class="hero__meta"><b>Segundo semestre de 2026</b> · Silicon Valley</div>
+  </div>
+  <div class="hero__scroll">
+    <span class="hero__scroll-label">Scroll</span>
+    <span class="hero__scroll-line"></span>
+  </div>
+</div>
+
+<section class="why">
+  <div class="container why__inner">
+    <div class="why__text sr">
+      <div class="kicker">Por que agora</div>
+      <h2>A próxima década da saúde está sendo construída <em>no Vale do Silício</em></h2>
+      <p>A inteligência artificial deixou de ser promessa para se tornar <strong>prática clínica</strong>: documentação médica automatizada, diagnóstico por imagem em tempo real, descoberta de fármacos acelerada e medicina de precisão guiada por genômica.</p>
+      <p>As empresas que lideram essa transformação — e os pesquisadores de <strong>Stanford Medicine</strong> que a fundamentam — estão concentradas em um raio de 80 quilômetros entre San Francisco e Palo Alto.</p>
+    </div>
+    <div class="sr sr-d1">
+      <p class="why__quote">O programa coloca a liderança do Einstein frente a frente com quem está redefinindo a saúde global — em sala de aula, dentro das empresas e à mesa de jantar.</p>
+    </div>
+  </div>
+</section>
+
+<section class="days" id="programa">
+  <div class="container">
+    <div class="days__intro sr">
+      <div class="kicker">A Jornada</div>
+      <h2>Três dias, três territórios da <em>inovação em saúde</em></h2>
+      <p class="lead">Do rigor acadêmico de Stanford às healthtechs de San Francisco e aos laboratórios de biotech do South Bay.</p>
+    </div>
+
+    <div class="day sr">
+      <div class="day__head">
+        <div class="day__num">Dia 01</div>
+        <h3>Stanford University</h3>
+        <p class="day__theme">Dia acadêmico com professores de Stanford Medicine e Biodesign, tour pelo campus e painel com o ecossistema.</p>
+      </div>
+      <div class="day__body">
+        <ul class="timeline">
+          <li><span class="time">8:30 – 9:00</span><div class="what"><b>Welcome Coffee</b><span>Recepção e networking no campus de Stanford</span></div></li>
+          <li class="hl"><span class="time">9:00 – 10:30</span><div class="what"><b>Talk — AI em Medicina &amp; Health Policy</b><span>Professor de Stanford Medicine — Clinical Excellence Research Center</span></div></li>
+          <li class="hl"><span class="time">10:45 – 12:15</span><div class="what"><b>Talk — Digital Health &amp; Biodesign</b><span>Inovação aplicada à saúde e design de soluções clínicas</span></div></li>
+          <li><span class="time">12:15 – 13:30</span><div class="what"><b>Networking Lunch</b><span>Almoço no campus</span></div></li>
+          <li><span class="time">13:30 – 14:30</span><div class="what"><b>Campus Visit</b><span>Stanford Medicine, d.school e GSB — Graduate School of Business</span></div></li>
+          <li class="hl"><span class="time">14:30 – 16:00</span><div class="what"><b>Painel — AI + Saúde: Academia vs. Startup</b><span>Professor de Stanford, founder de healthtech e brasileiro no Vale</span></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="day sr">
+      <div class="day__head">
+        <div class="day__num">Dia 02</div>
+        <h3>San Francisco — Health AI</h3>
+        <p class="day__theme">Visitas técnicas a empresas de AI aplicada à prática clínica, com apresentações exclusivas de CEOs e CTOs.</p>
+      </div>
+      <div class="day__body">
+        <ul class="timeline">
+          <li><span class="time">8:30 – 9:00</span><div class="what"><b>Briefing</b><span>Contexto do dia e mapa das visitas</span></div></li>
+          <li class="hl"><span class="time">9:00 – 10:30</span><div class="what"><b>Visita Técnica — AI Clínica &amp; Evidence-Based Medicine</b><span>OpenEvidence</span></div></li>
+          <li class="hl"><span class="time">11:00 – 12:30</span><div class="what"><b>Visita Técnica — Documentação Médica com AI</b><span>Ambience Healthcare</span></div></li>
+          <li><span class="time">12:30 – 14:00</span><div class="what"><b>Networking Lunch</b><span>Almoço com founder convidado</span></div></li>
+          <li class="hl"><span class="time">14:30 – 16:00</span><div class="what"><b>Visita Técnica — Diagnóstico por Imagem com AI</b><span>Viz.ai</span></div></li>
+          <li><span class="time">16:30 – 18:00</span><div class="what"><b>Talk + Q&amp;A — Empreendedorismo em Health AI</b><span>Conversa com founder de healthtech</span></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="day sr">
+      <div class="day__head">
+        <div class="day__num">Dia 03</div>
+        <h3>South Bay — Biotech &amp; Precision Medicine</h3>
+        <p class="day__theme">Drug discovery, genômica e medicina de precisão — e o painel de encerramento sobre o futuro da saúde.</p>
+      </div>
+      <div class="day__body">
+        <ul class="timeline">
+          <li><span class="time">8:30 – 9:00</span><div class="what"><b>Briefing</b><span>Reflexões do dia anterior e contexto do dia</span></div></li>
+          <li class="hl"><span class="time">9:00 – 10:30</span><div class="what"><b>Visita Técnica — AI Drug Discovery</b><span>Xaira Therapeutics</span></div></li>
+          <li class="hl"><span class="time">11:00 – 12:30</span><div class="what"><b>Visita Técnica — Genomics &amp; Neurociência</b><span>Verge Genomics</span></div></li>
+          <li><span class="time">12:30 – 14:00</span><div class="what"><b>Wrap-up Lunch</b><span>Almoço com convidado</span></div></li>
+          <li class="hl"><span class="time">14:30 – 16:00</span><div class="what"><b>Visita Técnica — Precision Medicine &amp; Oncologia</b><span>Hippocratic AI · Tempus AI</span></div></li>
+          <li class="hl"><span class="time">16:30 – 17:30</span><div class="what"><b>Painel de Encerramento — O Futuro da Saúde</b><span>Stanford + Startups + Brasil</span></div></li>
+          <li><span class="time">19:00</span><div class="what"><b>Jantar de Encerramento</b><span>Celebração e entrega de certificados</span></div></li>
+        </ul>
+      </div>
+    </div>
+    <p class="companies__note sr">Visitas e empresas sujeitas a confirmação.</p>
+  </div>
+</section>
+
+<section class="companies" id="empresas">
+  <div class="container">
+    <div class="companies__intro sr">
+      <div class="kicker">O Ecossistema</div>
+      <h2>As empresas que estão <em>redefinindo a saúde</em></h2>
+      <p class="lead">Healthtechs e biotechs que farão parte do programa — em visitas técnicas ou reuniões com suas lideranças.</p>
+    </div>
+    <div class="company-grid sr">
+      <div class="company"><img class="company__logo" src="img/logo-openevidence.png" alt="OpenEvidence"><div class="company__name">OpenEvidence</div><div class="company__desc">AI clínica e evidence-based medicine para médicos</div></div>
+      <div class="company"><img class="company__logo" src="img/logo-ambience.png" alt="Ambience Healthcare"><div class="company__name">Ambience Healthcare</div><div class="company__desc">Documentação médica automatizada com AI</div></div>
+      <div class="company"><img class="company__logo" src="img/logo-viz.png" alt="Viz.ai"><div class="company__name">Viz.ai</div><div class="company__desc">AI para diagnóstico por imagem e detecção de AVC</div></div>
+      <div class="company"><img class="company__logo" src="img/logo-hippocratic.png" alt="Hippocratic AI"><div class="company__name">Hippocratic AI</div><div class="company__desc">LLM clínico para patient care</div></div>
+      <div class="company"><img class="company__logo" src="img/logo-xaira.png" alt="Xaira Therapeutics"><div class="company__name">Xaira Therapeutics</div><div class="company__desc">AI drug discovery, com mais de $1B em funding</div></div>
+      <div class="company"><img class="company__logo" src="img/logo-verge.png" alt="Verge Genomics"><div class="company__name">Verge Genomics</div><div class="company__desc">AI genomics aplicada à neurociência</div></div>
+      <div class="company"><img class="company__logo" src="img/tempus-t.svg" alt="Tempus AI"><div class="company__name">Tempus AI</div><div class="company__desc">Precision medicine e oncologia</div></div>
+      <div class="company"><img class="company__logo" src="img/logo-abridge.png" alt="Abridge"><div class="company__name">Abridge</div><div class="company__desc">NLP clínico e conversational AI</div></div>
+    </div>
+    <p class="companies__note sr">Empresas sujeitas a confirmação.</p>
+
+    <div class="stanford sr">
+      <div>
+        <h3>Stanford <em>University</em></h3>
+        <p>O dia acadêmico do programa acontece dentro do campus de Stanford, com professores das escolas de medicina e inovação da universidade.</p>
+      </div>
+      <ul>
+        <li>Professores de Stanford Medicine, Biodesign e áreas correlatas</li>
+        <li>Visita a Stanford Medicine, d.school e GSB — Graduate School of Business</li>
+        <li>Painéis com o ecossistema: academia, startups e brasileiros no Vale</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="included" id="investimento">
+  <div class="container">
+    <div class="sr">
+      <div class="kicker">Escopo &amp; Investimento</div>
+      <h2>O que o programa <em>cobre</em></h2>
+    </div>
+    <div class="included__cols">
+      <div class="inc yes sr">
+        <h3>Incluso no programa</h3>
+        <ul>
+          <li><b>Speakers</b> — professores de Stanford e convidados (founders, pesquisadores)</li>
+          <li><b>Visitas técnicas</b> — healthtechs e biotechs, com apresentações exclusivas de CEOs/CTOs</li>
+          <li><b>Venues</b> — salas e espaços para aulas e painéis</li>
+          <li><b>Transporte</b> — van executiva entre todas as atividades, nos 3 dias</li>
+          <li><b>Coffee service</b></li>
+          <li><b>Curadoria Enhub</b> — organização, coordenação e acompanhamento completo</li>
+        </ul>
+      </div>
+      <div class="inc no sr sr-d1">
+        <h3>Não incluso</h3>
+        <ul>
+          <li>Passagens aéreas</li>
+          <li>Hospedagem</li>
+          <li>Alimentação fora dos almoços e jantares do programa</li>
+          <li>Seguro viagem</li>
+          <li>Visto americano</li>
+          <li>Dia opcional de turismo (Dia 4)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="invest__box sr">
+      <div class="invest__label">Investimento</div>
+      <div class="invest__value"><sup>US$</sup> 80.000</div>
+    </div>
+  </div>
+</section>
+
+<section class="enhub">
+  <div class="enhub__inner">
+    <div class="enhub__text">
+      <div class="kicker">Quem desenha o programa</div>
+      <h2><span class="brand">Enhub</span> — programas sob medida, <em>há mais de 15 anos</em></h2>
+      <p>A Enhub desenha e opera programas de imersão nos ecossistemas de inovação mais relevantes do mundo, sob medida para equipes executivas e de liderança — com universidades, startups e Big Techs.</p>
+      <div class="enhub__clients">
+        <a class="enhub__client" href="https://www.ifood.com.br" target="_blank" rel="noopener">iFood</a>
+        <a class="enhub__client" href="https://www.btgpactual.com" target="_blank" rel="noopener">BTG Pactual</a>
+        <a class="enhub__client" href="https://www.bv.com.br" target="_blank" rel="noopener">Banco BV</a>
+        <a class="enhub__client" href="https://unico.io" target="_blank" rel="noopener">Unico</a>
+        <span class="enhub__clients-more">dentre outras</span>
+      </div>
+    </div>
+    <div class="enhub__photo">
+      <img src="img/grupo-new.jpg" alt="Grupo de executivos em programa Enhub no campus de Stanford">
+      <span class="enhub__caption">Grupo Enhub em Stanford</span>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="contato">
+  <div class="container footer__inner">
+    <div class="footer__left">
+      <span class="footer__logo"><img src="img/logo.png" alt="Enhub Executive"></span>
+    </div>
+    <div class="footer__copy">Einstein @ Silicon Valley 2026 — Um programa Enhub.</div>
+  </div>
+</footer>
+
+<script>
+const header=document.getElementById('header');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>40),{passive:true});
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.sr').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
