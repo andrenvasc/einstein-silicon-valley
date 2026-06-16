@@ -5,12 +5,12 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A4E8F'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='700' font-size='28' fill='white'>e</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Einstein @ Silicon Valley 2026 — Programa Executivo de Imersão</title>
-<meta name="description" content="Imersão executiva de 3 dias em Saúde, AI & Inovação no Vale do Silício, desenhada para lideranças do Hospital Albert Einstein.">
+<meta name="description" content="Imersão executiva em Saúde, IA & Inovação no Vale do Silício — um dia em Stanford e três dias de visitas-âncora às empresas que estão redefinindo a saúde. Para lideranças do Hospital Albert Einstein.">
 <link rel="canonical" href="https://einstein.enhub.com.br/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://einstein.enhub.com.br/">
 <meta property="og:title" content="Einstein @ Silicon Valley 2026">
-<meta property="og:description" content="Imersão executiva de 3 dias em Saúde, AI & Inovação no Vale do Silício — Stanford, healthtechs e biotechs. Um programa Enhub.">
+<meta property="og:description" content="Imersão executiva em Saúde, IA & Inovação no Vale do Silício — Stanford e visitas-âncora a healthtechs e biotechs. Um programa Enhub.">
 <meta property="og:image" content="https://einstein.enhub.com.br/img/stanford.jpg">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
@@ -177,12 +177,23 @@ h2 em{font-style:italic;font-weight:400;color:var(--accent)}
 .inc.no li::before{content:'';position:absolute;left:0;top:1.35rem;width:12px;height:1px;background:var(--text-muted)}
 
 /* ═══════════════════════════════════════
-   INVESTIMENTO
+   INVESTIMENTO — modular
    ═══════════════════════════════════════ */
-.invest__box{text-align:center;margin-top:1.2rem;border:1px solid var(--border);border-radius:3px;padding:clamp(2.4rem,4.5vw,3.2rem) clamp(1.5rem,4vw,3.5rem);background:var(--bg)}
-.invest__label{font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem}
-.invest__value{font-family:var(--font-display);font-size:clamp(3.4rem,7vw,5rem);font-weight:500;color:var(--text);line-height:1;letter-spacing:-.01em}
-.invest__value sup{font-family:var(--font-mono);font-size:.26em;font-weight:400;letter-spacing:.1em;color:var(--accent);vertical-align:2.2em}
+.invest{text-align:center;margin-top:clamp(2rem,3.5vw,3rem)}
+.invest__label{font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
+.invest__intro{font-size:14.5px;font-weight:300;color:var(--text-sec);max-width:540px;margin:0 auto 1.7rem;line-height:1.6}
+.invest__cards{display:grid;grid-template-columns:1fr;gap:1rem;align-items:stretch}
+@media(min-width:680px){.invest__cards{grid-template-columns:1fr auto 1fr}}
+.invest__card{border:1px solid var(--border);border-radius:3px;background:var(--bg);padding:clamp(1.9rem,3.5vw,2.6rem) clamp(1.4rem,3vw,2.2rem);display:flex;flex-direction:column}
+.invest__card--core{border-color:var(--accent)}
+.invest__tier{font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem;display:flex;align-items:center;justify-content:center;gap:.5rem;flex-wrap:wrap}
+.invest__tier .opt{font-size:8.5px;letter-spacing:.1em;color:var(--text-muted);border:1px solid var(--border);border-radius:2px;padding:2px 7px}
+.invest__desc{font-size:13px;font-weight:300;color:var(--text-sec);margin-bottom:1.1rem;line-height:1.45}
+.invest__value{font-family:var(--font-display);font-size:clamp(2.7rem,5vw,3.6rem);font-weight:500;color:var(--text);line-height:1;letter-spacing:-.01em;margin-top:auto}
+.invest__value sup{font-family:var(--font-mono);font-size:.27em;font-weight:400;letter-spacing:.1em;color:var(--accent);vertical-align:1.9em}
+.invest__plus{display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.8rem;font-weight:400;color:var(--text-muted);padding:.3rem 0}
+.invest__total{margin-top:1.6rem;font-size:14px;font-weight:300;color:var(--text-sec);letter-spacing:.01em}
+.invest__total b{font-family:var(--font-display);font-size:1.6rem;font-weight:600;color:var(--text);vertical-align:middle;margin:0 .25rem;letter-spacing:-.01em}
 
 /* ═══════════════════════════════════════
    ENHUB
@@ -221,6 +232,50 @@ a.enhub__client:hover{border-color:var(--accent-light);color:#fff;background:rgb
 .footer__copy{font-family:var(--font-mono);font-size:9px;color:var(--text-muted);letter-spacing:.06em}
 
 /* ═══════════════════════════════════════
+   DIA — badge opcional + lente de avaliação
+   ═══════════════════════════════════════ */
+.day__badge{display:inline-block;margin-left:.7rem;font-family:var(--font-mono);font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:2px;padding:3px 9px;vertical-align:middle}
+.day__badge--count{color:var(--accent);background:rgba(10,78,143,.08);border-color:transparent}
+.lens{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:3px;overflow:hidden}
+@media(min-width:560px){.lens{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.lens{grid-template-columns:repeat(4,1fr)}}
+.lens__item{background:var(--bg);padding:1.4rem 1.3rem}
+.lens__n{font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:.1em;color:var(--accent);margin-bottom:.7rem}
+.lens__t{font-family:var(--font-display);font-size:1.3rem;font-weight:600;color:var(--text);line-height:1.2;margin-bottom:.35rem}
+.lens__d{font-size:12.5px;font-weight:300;color:var(--text-sec);line-height:1.5}
+.lens-intro{font-size:13px;font-weight:300;color:var(--text-sec);margin-bottom:1.2rem;letter-spacing:.02em}
+
+/* ═══════════════════════════════════════
+   CATEGORIAS DE VISITA
+   ═══════════════════════════════════════ */
+.cats{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:760px){.cats{grid-template-columns:1fr 1fr}}
+.cat{border:1px solid var(--border);border-radius:3px;background:var(--bg);padding:1.5rem 1.6rem;display:flex;flex-direction:column}
+.cat__n{font-family:var(--font-mono);font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-light)}
+.cat__title{font-family:var(--font-display);font-size:1.4rem;font-weight:600;color:var(--text);line-height:1.2;margin:.35rem 0 1.1rem}
+.cat__tag{display:inline-block;font-family:var(--font-mono);font-size:8.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);vertical-align:middle;margin-left:.55rem;border:1px solid var(--border);border-radius:2px;padding:2px 7px}
+.cat__cos{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:auto}
+.chip{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--border);border-radius:30px;padding:5px 13px 5px 6px;background:var(--bg-card);transition:border-color .3s,transform .3s var(--ease)}
+.chip:hover{border-color:var(--accent-light);transform:translateY(-2px)}
+.chip img{width:22px;height:22px;object-fit:contain;border-radius:3px;flex-shrink:0}
+.chip span{font-size:12.5px;font-weight:400;color:var(--text);white-space:nowrap}
+
+/* ═══════════════════════════════════════
+   STANFORD — seção institucional
+   ═══════════════════════════════════════ */
+.stanfordsec{background:var(--bg-dark);color:#fff;border-top:1px solid var(--border)}
+.stanfordsec__inner{display:grid;grid-template-columns:1fr;gap:2.4rem;align-items:center}
+@media(min-width:820px){.stanfordsec__inner{grid-template-columns:auto 1fr;gap:clamp(3rem,6vw,5.5rem)}}
+.stanfordsec__crest{width:clamp(110px,15vw,160px);height:auto}
+.stanfordsec .kicker{color:var(--accent-light)}
+.stanfordsec .kicker::before{background:var(--accent-light)}
+.stanfordsec h2{color:#fff;margin-bottom:1rem}
+.stanfordsec h2 em{color:var(--accent-light)}
+.stanfordsec p{font-size:15px;font-weight:300;color:rgba(255,255,255,.66);line-height:1.7;max-width:540px;margin-bottom:1.7rem}
+.stanfordsec__progs{display:flex;flex-wrap:wrap;gap:.6rem}
+.prog{font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.25);padding:9px 16px;border-radius:2px}
+
+/* ═══════════════════════════════════════
    RESPONSIVO
    ═══════════════════════════════════════ */
 @media(max-width:767px){
@@ -234,6 +289,33 @@ a.enhub__client:hover{border-color:var(--accent-light);color:#fff;background:rgb
   .company-grid{grid-template-columns:1fr}
   .timeline li{grid-template-columns:1fr;gap:.15rem}
 }
+
+/* ═══════════════════════════════════════
+   IMPRESSÃO / PDF
+   ═══════════════════════════════════════ */
+@media print{
+  @page{size:A4;margin:0}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html{scroll-padding-top:0}
+  body{background:var(--bg)}
+  .sr{opacity:1!important;transform:none!important;transition:none!important}
+  .hero__img img{animation:none!important;transform:none!important}
+  .header{position:absolute;height:90px}
+  .header__nav{display:none}
+  .hero{height:297mm;min-height:0;page-break-after:always}
+  .hero__scroll{display:none}
+  section{padding:14mm 0;page-break-inside:auto}
+  .days{page-break-before:always}
+  .companies,.stanfordsec{page-break-before:always}
+  .stanfordsec{page-break-inside:avoid}
+  .day,.cat,.inc,.invest,.invest__card,.lens,.why__quote{page-break-inside:avoid;break-inside:avoid}
+  .included{page-break-before:always}
+  .enhub{page-break-before:always;page-break-inside:avoid}
+  .enhub__inner{min-height:0}
+  .enhub__photo{min-height:90mm}
+  .company:hover{transform:none}
+  .footer{page-break-inside:avoid}
+}
 </style>
 </head>
 <body>
@@ -244,6 +326,7 @@ a.enhub__client:hover{border-color:var(--accent-light);color:#fff;background:rgb
     <nav class="header__nav">
       <a class="header__link" href="#programa">Programa</a>
       <a class="header__link" href="#empresas">Empresas</a>
+      <a class="header__link" href="#stanford">Stanford</a>
       <a class="header__link" href="#investimento">Investimento</a>
     </nav>
     <img class="header__enhub" src="img/logo.png" alt="Enhub Executive">
@@ -257,7 +340,7 @@ a.enhub__client:hover{border-color:var(--accent-light);color:#fff;background:rgb
   <div class="hero__content">
     <div class="hero__kicker">Programa Executivo de Imersão</div>
     <h1 class="hero__headline">Onde a medicina encontra o <em>futuro da inteligência artificial</em></h1>
-    <p class="hero__sub">Uma imersão executiva de 3 dias no coração do Vale do Silício, desenhada exclusivamente para lideranças do Hospital Israelita Albert Einstein.</p>
+    <p class="hero__sub">Quatro dias no coração do Vale do Silício — um dia acadêmico em Stanford e três dias de imersão prática dentro das empresas que estão redefinindo a saúde com IA. Desenhado exclusivamente para lideranças do Hospital Israelita Albert Einstein.</p>
     <div class="hero__meta"><b>Segundo semestre de 2026</b> · Silicon Valley</div>
   </div>
   <div class="hero__scroll">
@@ -275,7 +358,7 @@ a.enhub__client:hover{border-color:var(--accent-light);color:#fff;background:rgb
       <p>As empresas que lideram essa transformação — e os pesquisadores de <strong>Stanford Medicine</strong> que a fundamentam — estão concentradas em um raio de 80 quilômetros entre San Francisco e Palo Alto.</p>
     </div>
     <div class="sr sr-d1">
-      <p class="why__quote">O programa coloca a liderança do Einstein frente a frente com quem está redefinindo a saúde global — em sala de aula, dentro das empresas e à mesa de jantar.</p>
+      <p class="why__quote">Não é uma vitrine de tecnologia. É uma agenda de avaliação: o que cada solução faz, seus cases reais, o ROI e a aderência à realidade do Einstein.</p>
     </div>
   </div>
 </section>
@@ -284,97 +367,158 @@ a.enhub__client:hover{border-color:var(--accent-light);color:#fff;background:rgb
   <div class="container">
     <div class="days__intro sr">
       <div class="kicker">A Jornada</div>
-      <h2>Três dias, três territórios da <em>inovação em saúde</em></h2>
-      <p class="lead">Do rigor acadêmico de Stanford às healthtechs de San Francisco e aos laboratórios de biotech do South Bay.</p>
+      <h2>Um dia em Stanford, três dias <em>dentro das empresas</em></h2>
+      <p class="lead">Quatro dias no Vale do Silício: um dia acadêmico em Stanford — opcional — seguido de três dias de imersão prática, com visitas-âncora às empresas que estão construindo a transformação da saúde com IA.</p>
     </div>
 
     <div class="day sr">
       <div class="day__head">
         <div class="day__num">Dia 01</div>
-        <h3>Stanford University</h3>
-        <p class="day__theme">Dia acadêmico com professores de Stanford Medicine e Biodesign, tour pelo campus e painel com o ecossistema.</p>
+        <h3>Stanford University<span class="day__badge">Opcional</span></h3>
+        <p class="day__theme">Manhã acadêmica com Stanford Medicine e Biodesign, visita ao campus e — a perspectiva do provider — uma tentativa de visita ao Stanford Health Care.</p>
       </div>
       <div class="day__body">
         <ul class="timeline">
           <li><span class="time">8:30 – 9:00</span><div class="what"><b>Welcome Coffee</b><span>Recepção e networking no campus de Stanford</span></div></li>
-          <li class="hl"><span class="time">9:00 – 10:30</span><div class="what"><b>Talk — AI em Medicina &amp; Health Policy</b><span>Professor de Stanford Medicine — Clinical Excellence Research Center</span></div></li>
+          <li class="hl"><span class="time">9:00 – 10:30</span><div class="what"><b>Talk — IA em Medicina &amp; Health Policy</b><span>Stanford Medicine · Stanford HAI</span></div></li>
           <li class="hl"><span class="time">10:45 – 12:15</span><div class="what"><b>Talk — Digital Health &amp; Biodesign</b><span>Inovação aplicada à saúde e design de soluções clínicas</span></div></li>
           <li><span class="time">12:15 – 13:30</span><div class="what"><b>Networking Lunch</b><span>Almoço no campus</span></div></li>
           <li><span class="time">13:30 – 14:30</span><div class="what"><b>Campus Visit</b><span>Stanford Medicine, d.school e GSB — Graduate School of Business</span></div></li>
-          <li class="hl"><span class="time">14:30 – 16:00</span><div class="what"><b>Painel — AI + Saúde: Academia vs. Startup</b><span>Professor de Stanford, founder de healthtech e brasileiro no Vale</span></div></li>
+          <li class="hl"><span class="time">14:30 – 16:00</span><div class="what"><b>Stanford Health Care — a perspectiva do provider</b><span>Como um health system de ponta conduz sua AI Transformation: o trade-off entre velocidade e governança</span></div></li>
+          <li><span class="time">16:00 – 17:00</span><div class="what"><b>Painel — Academia × Startup × Provider</b><span>Professor de Stanford, founder de healthtech e líder de health system</span></div></li>
         </ul>
       </div>
     </div>
 
-    <div class="day sr">
+    <div class="day day--immersion sr">
       <div class="day__head">
-        <div class="day__num">Dia 02</div>
-        <h3>San Francisco — Health AI</h3>
-        <p class="day__theme">Visitas técnicas a empresas de AI aplicada à prática clínica, com apresentações exclusivas de CEOs e CTOs.</p>
+        <div class="day__num">Dias 02 · 03 · 04</div>
+        <h3>Imersão prática nas empresas<span class="day__badge day__badge--count">3 dias de visitas</span></h3>
+        <p class="day__theme">Três dias de visitas-âncora — uma por categoria — às empresas na fronteira da IA aplicada à saúde. Cada visita é negociada e agendada diretamente com a empresa.</p>
       </div>
       <div class="day__body">
-        <ul class="timeline">
-          <li><span class="time">8:30 – 9:00</span><div class="what"><b>Briefing</b><span>Contexto do dia e mapa das visitas</span></div></li>
-          <li class="hl"><span class="time">9:00 – 10:30</span><div class="what"><b>Visita Técnica — AI Clínica &amp; Evidence-Based Medicine</b><span>OpenEvidence</span></div></li>
-          <li class="hl"><span class="time">11:00 – 12:30</span><div class="what"><b>Visita Técnica — Documentação Médica com AI</b><span>Ambience Healthcare</span></div></li>
-          <li><span class="time">12:30 – 14:00</span><div class="what"><b>Networking Lunch</b><span>Almoço com founder convidado</span></div></li>
-          <li class="hl"><span class="time">14:30 – 16:00</span><div class="what"><b>Visita Técnica — Diagnóstico por Imagem com AI</b><span>Viz.ai</span></div></li>
-          <li><span class="time">16:30 – 18:00</span><div class="what"><b>Talk + Q&amp;A — Empreendedorismo em Health AI</b><span>Conversa com founder de healthtech</span></div></li>
-        </ul>
+        <p class="lens-intro">O propósito de cada visita não é vitrine, e sim avaliação:</p>
+        <div class="lens">
+          <div class="lens__item"><div class="lens__n">01</div><div class="lens__t">O que faz</div><div class="lens__d">A solução por dentro, direto com quem a construiu</div></div>
+          <div class="lens__item"><div class="lens__n">02</div><div class="lens__t">Cases &amp; demos</div><div class="lens__d">Evidência real de uso clínico e operacional</div></div>
+          <div class="lens__item"><div class="lens__n">03</div><div class="lens__t">ROI</div><div class="lens__d">Impacto, custo e o caso de negócio por trás</div></div>
+          <div class="lens__item"><div class="lens__n">04</div><div class="lens__t">Aderência ao Einstein</div><div class="lens__d">Como se encaixa na realidade e nas prioridades do hospital</div></div>
+        </div>
       </div>
     </div>
-
-    <div class="day sr">
-      <div class="day__head">
-        <div class="day__num">Dia 03</div>
-        <h3>South Bay — Biotech &amp; Precision Medicine</h3>
-        <p class="day__theme">Drug discovery, genômica e medicina de precisão — e o painel de encerramento sobre o futuro da saúde.</p>
-      </div>
-      <div class="day__body">
-        <ul class="timeline">
-          <li><span class="time">8:30 – 9:00</span><div class="what"><b>Briefing</b><span>Reflexões do dia anterior e contexto do dia</span></div></li>
-          <li class="hl"><span class="time">9:00 – 10:30</span><div class="what"><b>Visita Técnica — AI Drug Discovery</b><span>Xaira Therapeutics</span></div></li>
-          <li class="hl"><span class="time">11:00 – 12:30</span><div class="what"><b>Visita Técnica — Genomics &amp; Neurociência</b><span>Verge Genomics</span></div></li>
-          <li><span class="time">12:30 – 14:00</span><div class="what"><b>Wrap-up Lunch</b><span>Almoço com convidado</span></div></li>
-          <li class="hl"><span class="time">14:30 – 16:00</span><div class="what"><b>Visita Técnica — Precision Medicine &amp; Oncologia</b><span>Hippocratic AI · Tempus AI</span></div></li>
-          <li class="hl"><span class="time">16:30 – 17:30</span><div class="what"><b>Painel de Encerramento — O Futuro da Saúde</b><span>Stanford + Startups + Brasil</span></div></li>
-          <li><span class="time">19:00</span><div class="what"><b>Jantar de Encerramento</b><span>Celebração e entrega de certificados</span></div></li>
-        </ul>
-      </div>
-    </div>
-    <p class="companies__note sr">Visitas e empresas sujeitas a confirmação.</p>
+    <p class="companies__note sr">Encerramento estratégico ao final do programa. Agenda e visitas sujeitas a confirmação.</p>
   </div>
 </section>
 
 <section class="companies" id="empresas">
   <div class="container">
     <div class="companies__intro sr">
-      <div class="kicker">O Ecossistema</div>
-      <h2>As empresas que estão <em>redefinindo a saúde</em></h2>
-      <p class="lead">Healthtechs e biotechs que farão parte do programa — em visitas técnicas ou reuniões com suas lideranças.</p>
+      <div class="kicker">Categorias de visita</div>
+      <h2>Uma visita-âncora <em>por categoria</em></h2>
+      <p class="lead">As empresas abaixo são os <em>targets</em> de cada categoria — a fronteira da IA aplicada à saúde. As visitas serão negociadas e agendadas com cada uma.</p>
     </div>
-    <div class="company-grid sr">
-      <div class="company"><img class="company__logo" src="img/logo-openevidence.png" alt="OpenEvidence"><div class="company__name">OpenEvidence</div><div class="company__desc">AI clínica e evidence-based medicine para médicos</div></div>
-      <div class="company"><img class="company__logo" src="img/logo-ambience.png" alt="Ambience Healthcare"><div class="company__name">Ambience Healthcare</div><div class="company__desc">Documentação médica automatizada com AI</div></div>
-      <div class="company"><img class="company__logo" src="img/logo-viz.png" alt="Viz.ai"><div class="company__name">Viz.ai</div><div class="company__desc">AI para diagnóstico por imagem e detecção de AVC</div></div>
-      <div class="company"><img class="company__logo" src="img/logo-hippocratic.png" alt="Hippocratic AI"><div class="company__name">Hippocratic AI</div><div class="company__desc">LLM clínico para patient care</div></div>
-      <div class="company"><img class="company__logo" src="img/logo-xaira.png" alt="Xaira Therapeutics"><div class="company__name">Xaira Therapeutics</div><div class="company__desc">AI drug discovery, com mais de $1B em funding</div></div>
-      <div class="company"><img class="company__logo" src="img/logo-verge.png" alt="Verge Genomics"><div class="company__name">Verge Genomics</div><div class="company__desc">AI genomics aplicada à neurociência</div></div>
-      <div class="company"><img class="company__logo" src="img/tempus-t.svg" alt="Tempus AI"><div class="company__name">Tempus AI</div><div class="company__desc">Precision medicine e oncologia</div></div>
-      <div class="company"><img class="company__logo" src="img/logo-abridge.png" alt="Abridge"><div class="company__name">Abridge</div><div class="company__desc">NLP clínico e conversational AI</div></div>
-    </div>
-    <p class="companies__note sr">Empresas sujeitas a confirmação.</p>
+    <div class="cats sr">
 
-    <div class="stanford sr">
-      <div>
-        <h3>Stanford <em>University</em></h3>
-        <p>O dia acadêmico do programa acontece dentro do campus de Stanford, com professores das escolas de medicina e inovação da universidade.</p>
+      <div class="cat">
+        <div class="cat__n">01</div>
+        <div class="cat__title">Documentação Clínica &amp; Ambient AI</div>
+        <div class="cat__cos">
+          <span class="chip"><img src="img/logo-ambience.png" alt="">Ambience Healthcare</span>
+          <span class="chip"><img src="img/logo-abridge.png" alt="">Abridge</span>
+          <span class="chip"><img src="img/co-heidi.png" alt="">Heidi Health</span>
+        </div>
       </div>
-      <ul>
-        <li>Professores de Stanford Medicine, Biodesign e áreas correlatas</li>
-        <li>Visita a Stanford Medicine, d.school e GSB — Graduate School of Business</li>
-        <li>Painéis com o ecossistema: academia, startups e brasileiros no Vale</li>
-      </ul>
+
+      <div class="cat">
+        <div class="cat__n">02</div>
+        <div class="cat__title">Suporte à Decisão Clínica &amp; Evidência</div>
+        <div class="cat__cos">
+          <span class="chip"><img src="img/logo-openevidence.png" alt="">OpenEvidence</span>
+        </div>
+      </div>
+
+      <div class="cat">
+        <div class="cat__n">03</div>
+        <div class="cat__title">Diagnóstico por Imagem</div>
+        <div class="cat__cos">
+          <span class="chip"><img src="img/logo-viz.png" alt="">Viz.ai</span>
+          <span class="chip"><img src="img/co-aidoc.png" alt="">Aidoc</span>
+        </div>
+      </div>
+
+      <div class="cat">
+        <div class="cat__n">04</div>
+        <div class="cat__title">Patient Care &amp; Agentes Clínicos</div>
+        <div class="cat__cos">
+          <span class="chip"><img src="img/logo-hippocratic.png" alt="">Hippocratic AI</span>
+        </div>
+      </div>
+
+      <div class="cat">
+        <div class="cat__n">05</div>
+        <div class="cat__title">Operações &amp; Acesso do Paciente</div>
+        <div class="cat__cos">
+          <span class="chip"><img src="img/co-assort.png" alt="">Assort Health</span>
+          <span class="chip"><img src="img/co-commure.png" alt="">Commure</span>
+        </div>
+      </div>
+
+      <div class="cat">
+        <div class="cat__n">06</div>
+        <div class="cat__title">Precisão, Genômica &amp; Oncologia</div>
+        <div class="cat__cos">
+          <span class="chip"><img src="img/tempus-t.svg" alt="">Tempus AI</span>
+          <span class="chip"><img src="img/logo-verge.png" alt="">Verge Genomics</span>
+        </div>
+      </div>
+
+      <div class="cat">
+        <div class="cat__n">07</div>
+        <div class="cat__title">Biotech, Drug Discovery &amp; Longevidade</div>
+        <div class="cat__cos">
+          <span class="chip"><img src="img/logo-xaira.png" alt="">Xaira Therapeutics</span>
+          <span class="chip"><img src="img/co-chai.png" alt="">Chai Discovery</span>
+          <span class="chip"><img src="img/co-retro.svg" alt="">Retro Biosciences</span>
+        </div>
+      </div>
+
+      <div class="cat">
+        <div class="cat__n">08</div>
+        <div class="cat__title">Foundation Models &amp; Big Tech<span class="cat__tag">Stretch</span></div>
+        <div class="cat__cos">
+          <span class="chip"><img src="img/co-openai.png" alt="">OpenAI</span>
+          <span class="chip"><img src="img/co-anthropic.png" alt="">Anthropic</span>
+          <span class="chip"><img src="img/co-deepmind.png" alt="">Google DeepMind</span>
+        </div>
+      </div>
+
+      <div class="cat">
+        <div class="cat__n">09</div>
+        <div class="cat__title">Plataforma de IA Enterprise &amp; Governança</div>
+        <div class="cat__cos">
+          <span class="chip"><img src="img/co-qualified.png" alt="">Qualified Health</span>
+        </div>
+      </div>
+
+    </div>
+    <p class="companies__note sr">Empresas-alvo por categoria — visitas sujeitas a negociação e confirmação.</p>
+  </div>
+</section>
+
+<section class="stanfordsec" id="stanford">
+  <div class="container stanfordsec__inner">
+    <img class="stanfordsec__crest sr" src="img/st-med.png" alt="Stanford Medicine">
+    <div class="sr sr-d1">
+      <div class="kicker">O âncora acadêmico</div>
+      <h2>Stanford<em> — onde a ciência fundamenta a prática</em></h2>
+      <p>O dia em Stanford ancora o programa na fronteira da pesquisa em saúde e IA — dos centros clínicos aos institutos que estão definindo como a inteligência artificial entra na medicina com segurança e governança.</p>
+      <div class="stanfordsec__progs">
+        <span class="prog">Stanford Medicine</span>
+        <span class="prog">Stanford HAI</span>
+        <span class="prog">RAISE Health</span>
+        <span class="prog">ARISE</span>
+        <span class="prog">Biodesign</span>
+      </div>
     </div>
   </div>
 </section>
@@ -392,7 +536,7 @@ a.enhub__client:hover{border-color:var(--accent-light);color:#fff;background:rgb
           <li><b>Speakers</b> — professores de Stanford e convidados (founders, pesquisadores)</li>
           <li><b>Visitas técnicas</b> — healthtechs e biotechs, com apresentações exclusivas de CEOs/CTOs</li>
           <li><b>Venues</b> — salas e espaços para aulas e painéis</li>
-          <li><b>Transporte</b> — van executiva entre todas as atividades, nos 3 dias</li>
+          <li><b>Transporte</b> — van executiva entre todas as atividades, durante todo o programa</li>
           <li><b>Coffee service</b></li>
           <li><b>Curadoria Enhub</b> — organização, coordenação e acompanhamento completo</li>
         </ul>
@@ -405,13 +549,27 @@ a.enhub__client:hover{border-color:var(--accent-light);color:#fff;background:rgb
           <li>Alimentação fora dos almoços e jantares do programa</li>
           <li>Seguro viagem</li>
           <li>Visto americano</li>
-          <li>Dia opcional de turismo (Dia 4)</li>
+          <li>Extensão opcional de turismo</li>
         </ul>
       </div>
     </div>
-    <div class="invest__box sr">
-      <div class="invest__label">Investimento</div>
-      <div class="invest__value"><sup>US$</sup> 80.000</div>
+    <div class="invest sr">
+      <div class="invest__label">Investimento modular</div>
+      <p class="invest__intro">O core do programa, com o dia em Stanford como add-on opcional — se o grupo dispensar Stanford, o valor se ajusta.</p>
+      <div class="invest__cards">
+        <div class="invest__card invest__card--core">
+          <div class="invest__tier">Core do programa</div>
+          <div class="invest__desc">3 dias de imersão prática nas empresas (Dias 02 · 03 · 04)</div>
+          <div class="invest__value"><sup>US$</sup> 62.000</div>
+        </div>
+        <div class="invest__plus" aria-hidden="true">+</div>
+        <div class="invest__card invest__card--addon">
+          <div class="invest__tier">Dia em Stanford <span class="opt">Opcional</span></div>
+          <div class="invest__desc">Dia 01 — manhã acadêmica + Stanford Health Care</div>
+          <div class="invest__value"><sup>US$</sup> 18.000</div>
+        </div>
+      </div>
+      <p class="invest__total">Programa completo · <b>US$ 80.000</b> · para um grupo de 10 a 12 executivos</p>
     </div>
   </div>
 </section>
