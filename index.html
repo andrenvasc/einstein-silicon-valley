@@ -31,6 +31,7 @@
   --accent:#0A4E8F;
   --accent-mid:#1565AE;
   --accent-light:#5EA3DC;
+  --cardinal:#8C1515;
   --border:#E5E2DC;
   --font-display:'Cormorant Garamond',Georgia,serif;
   --font-body:'DM Sans',-apple-system,sans-serif;
@@ -247,13 +248,25 @@ a.enhub__client:hover{border-color:var(--accent-light);color:#fff;background:rgb
 
 /* DIA 01 · estrutura do dia + temas */
 .day__badge--full{color:var(--accent);background:rgba(10,78,143,.08);border-color:transparent}
-.rhythm{border:1px solid var(--border);border-radius:3px;background:var(--bg-card);padding:.3rem 1.6rem;margin-bottom:2rem}
-.rhythm__row{display:flex;align-items:center;gap:1.4rem;padding:1.05rem 0}
-.rhythm__label{font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);width:60px;flex-shrink:0}
-.rhythm__flow{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
-.rhythm__flow .s{font-size:14px;font-weight:500;color:var(--text);border:1px solid var(--border);border-radius:30px;padding:6px 18px;background:var(--bg)}
-.rhythm__flow .cb{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted)}
-.rhythm__lunch{text-align:center;font-family:var(--font-mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted);padding:.7rem 0;border-top:1px dashed var(--border);border-bottom:1px dashed var(--border)}
+.day--stanford{background:#FAF4F3;border-color:#ECDFDD;border-left:3px solid var(--cardinal)}
+.day--stanford .day__head{border-bottom-color:#ECDFDD}
+.day--stanford .day__num{color:var(--cardinal)}
+.day--stanford .day__num::before{background:var(--cardinal)}
+.day--stanford .day__badge{color:var(--cardinal);border-color:var(--cardinal)}
+.day--stanford .day__badge--full{color:var(--cardinal);background:rgba(140,21,21,.09);border-color:transparent}
+.day--stanford .themes__label{color:var(--cardinal)}
+.day--stanford .themes{background:#ECDFDD}
+.day--stanford .theme{background:#fff}
+.day--stanford .theme__n{color:var(--cardinal)}
+.day--stanford .theme__sub{color:var(--cardinal)}
+.rhythm{display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:.8rem}
+@media(min-width:560px){.rhythm{grid-template-columns:1fr 1fr}}
+.turno{border:1px solid #ECDFDD;border-radius:3px;background:var(--bg);padding:1.2rem 1.4rem}
+.turno__label{font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--cardinal);margin-bottom:.7rem}
+.ses{font-family:var(--font-display);font-size:1.4rem;font-weight:600;color:var(--text);line-height:1.3}
+.cbreak{display:flex;align-items:center;gap:.7rem;font-family:var(--font-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);padding:.45rem 0}
+.cbreak::before,.cbreak::after{content:'';flex:1;height:1px;background:#ECDFDD}
+.rhythm__lunch{text-align:center;font-family:var(--font-mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1.8rem}
 .themes__label{font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.1rem}
 .themes{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:3px;overflow:hidden}
 @media(min-width:760px){.themes{grid-template-columns:1fr 1fr}}
@@ -389,7 +402,7 @@ a.enhub__client:hover{border-color:var(--accent-light);color:#fff;background:rgb
       <p class="lead">Quatro dias no Vale do Silício: um dia acadêmico em Stanford (opcional) seguido de três dias de imersão prática, com visitas-âncora às empresas que estão construindo a transformação da saúde com IA.</p>
     </div>
 
-    <div class="day sr">
+    <div class="day day--stanford sr">
       <div class="day__head">
         <div class="day__num">Dia 01</div>
         <h3>Stanford University<span class="day__badge">Opcional</span><span class="day__badge day__badge--full">Dia completo</span></h3>
@@ -397,16 +410,20 @@ a.enhub__client:hover{border-color:var(--accent-light);color:#fff;background:rgb
       </div>
       <div class="day__body">
         <div class="rhythm">
-          <div class="rhythm__row">
-            <span class="rhythm__label">Manhã</span>
-            <div class="rhythm__flow"><span class="s">Sessão 1</span><span class="cb">coffee break</span><span class="s">Sessão 2</span></div>
+          <div class="turno">
+            <div class="turno__label">Manhã</div>
+            <div class="ses">Sessão 1</div>
+            <div class="cbreak">coffee break</div>
+            <div class="ses">Sessão 2</div>
           </div>
-          <div class="rhythm__lunch">Networking lunch</div>
-          <div class="rhythm__row">
-            <span class="rhythm__label">Tarde</span>
-            <div class="rhythm__flow"><span class="s">Sessão 3</span><span class="cb">coffee break</span><span class="s">Sessão 4</span></div>
+          <div class="turno">
+            <div class="turno__label">Tarde</div>
+            <div class="ses">Sessão 3</div>
+            <div class="cbreak">coffee break</div>
+            <div class="ses">Sessão 4</div>
           </div>
         </div>
+        <div class="rhythm__lunch">Almoço de networking entre os turnos</div>
         <div class="themes__label">Temas a serem tratados ao longo do dia</div>
         <div class="themes">
           <div class="theme"><div class="theme__n">01</div><div class="theme__t">O estado real da IA em saúde em 2026</div><div class="theme__sub">o que tem evidência e o que ainda é demo</div><div class="theme__d">O veredito científico sobre o que saiu do hype: ferramentas com RCT e desfecho clínico medido vs. promessas de pitch, e para onde flui o capital, com que retorno real.</div></div>
